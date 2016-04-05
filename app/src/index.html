@@ -20,11 +20,43 @@
     <!-- endbuild -->
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+   <div class="page-header">
+     <h1>
+       CAMT
+       <small>SoftWare Component Based SoftWare Development</small>
+     </h1>
+   </div>
 
-    <div ng-view></div>
+    <div class="navbar navbar-default" ng-controller="languageController">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-class="{'active':currentLocale=='en'}"><a href="" ng-click="changeLanguage('en')">EN</a> </li>
+            <li ng-class="{'active':currentLocale=='fr'}"><a href="" ng-click="changeLanguage('fr')">FR</a> </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-md-2">
+         <div ng-include src="'app/components/leftnav.html'"></div>
+       </div>
+       <div class="col-md-10">
+         <!-- Breadcrumbs =====================================-->
+         <ng-view>Loading...</ng-view>
+       </div>
+     </div>
+
+   </div>
+
+   <!-- In production use:
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+   -->
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

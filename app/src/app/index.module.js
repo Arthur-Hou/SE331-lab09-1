@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('app', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'ui.bootstrap', 'toastr']);
+    .module('lapApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'flow','ngResource+apiPrefix','cgBusy']);
 
 })();

@@ -27,6 +27,44 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
   }
 }
 
+.menu{
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before{
+  content:"[";
+}
+
+.menu:after{
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before{
+  content:"|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before{
+  content:"";
+  padding: 0;
+}
+
+.error{
+  display: block;
+  float: none;
+  color: red;
+  padding-left: 11.5em;
+  vertical-align: top;
+}
+
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
