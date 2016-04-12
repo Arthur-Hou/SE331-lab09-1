@@ -10,10 +10,12 @@
       .when('/addProduct', {
         templateUrl: 'app/product/editProduct.html',
         controller: 'addProductController',
+        controllerAs:'vm'
       })
       .when('/editProduct/:id', {
         templateUrl: 'app/product/editProduct.html',
         controller: 'editProductController',
+        controllerAs:'vm'
       })
       .when('/listProduct', {
         templateUrl: 'app/product/productList.html',
@@ -23,6 +25,7 @@
       .when('/shoppingCart/:id', {
         templateUrl: 'app/shoppingcart/shoppingCart.html',
         controller: 'showShoppingCartController',
+        controllerAs:'vm'
       })
       .otherwise({
         redirectTo: '/listProduct'
