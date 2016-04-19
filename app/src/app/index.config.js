@@ -2,11 +2,10 @@
   'use strict';
 
   angular
-    .module('App')
+    .module('app')
     .config(configTranslation)
     .config(configCompilerProvider)
     .config(configFlowFactoryProvider);
-
   /** @ngInject */
   function configTranslation($translateProvider) {
     // Enable log
